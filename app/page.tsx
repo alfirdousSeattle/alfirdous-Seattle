@@ -8,27 +8,28 @@ import React, { useEffect } from "react";
 
 export default function Home() {
   useEffect(() => {
-    const handleNavLinkClick = (e) => {
+    const handleNavLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
       e.preventDefault();
-      const targetId = e.currentTarget.getAttribute("href").substring(1);
-      const section = document.getElementById(targetId);
+      const targetId = e.currentTarget.getAttribute("href")?.substring(1); // Get the target section ID
+      if (!targetId) return;
 
+      const section = document.getElementById(targetId);
       if (section) {
         const offset = 70; // Offset for fixed navbar
         const topPosition =
           section.getBoundingClientRect().top + window.scrollY - offset;
-        window.scrollTo({ top: topPosition, behavior: "smooth" });
+        window.scrollTo({ top: topPosition, behavior: "smooth" }); // Smooth scroll to the section
       }
     };
 
     const links = document.querySelectorAll("nav a");
     links.forEach((link) =>
-      link.addEventListener("click", handleNavLinkClick)
+      link.addEventListener("click", handleNavLinkClick as unknown as EventListener)
     );
 
     return () => {
       links.forEach((link) =>
-        link.removeEventListener("click", handleNavLinkClick)
+        link.removeEventListener("click", handleNavLinkClick as unknown as EventListener)
       );
     };
   }, []);
@@ -71,9 +72,7 @@ export default function Home() {
       </section>
 
       {/* About Us Section */}
-      <section
-        id="about-us"     
-      >
+      <section id="about-us" className="py-20 bg-white">
         <div className="mt-12">
           <Aboutus />
         </div>
