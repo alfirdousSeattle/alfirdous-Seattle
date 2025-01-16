@@ -133,16 +133,19 @@ const OrgPrograms = () => {
             </h3>
             {/* Scrollable Description */}
             <ul
-              className="text-white px-4 list-disc list-inside overflow-y-auto"
-              style={{ maxHeight: "150px" }}
-              onScroll={(e) => console.log("Scrolled: ", e.target.scrollTop)}
-            >
-              {program.description.map((item, i) => (
-                <li key={i} className="mb-2">
-                  {item}
-                </li>
-              ))}
-            </ul>
+  className="text-white px-4 list-disc list-inside overflow-y-auto"
+  style={{ maxHeight: "150px" }}
+  onScroll={(e) => {
+    const target = e.target as HTMLElement; // Cast target to HTMLElement
+    console.log("Scrolled: ", target.scrollTop);
+  }}
+>
+  {program.description.map((item, i) => (
+    <li key={i} className="mb-2">
+      {item}
+    </li>
+  ))}
+</ul>
           </div>
         </div>
       ))}
