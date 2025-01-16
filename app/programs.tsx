@@ -94,7 +94,7 @@ const OrgPrograms = () => {
       </p>
       
 
-        <div className="relative max-w-5xl mx-auto px-6 flex flex-col justify-end w-full h-[400] bg-cover bg-center"
+        <div className="relative max-w-5xl mx-auto px-6 pt-2 flex flex-col justify-end w-full h-[400] bg-cover bg-center"
         style={{ backgroundImage: "url('/images/Alfidous_Program_Image.png')" }}>
           {/* Modal */}
           {showModal && (
@@ -133,7 +133,7 @@ const OrgPrograms = () => {
               className="flex transition-transform duration-700 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 50}%)` }}
             >
-              {programs.map((program, index) => (
+              {programs.map((program) => (
                 <div
                   key={program.id}
                   className="flex-shrink-0 w-1/2 px-4 relative"
