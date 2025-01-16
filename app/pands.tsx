@@ -106,7 +106,7 @@ We organize food distribution drives and community service projects that allow y
           <div className="relative">
             <div className={`transition-all duration-500 ease-in-out ${showSolution ? "hidden" : "block"}`}>
               <h3 className="text-2xl font-bold text-greenDark mb-4">The Problem</h3>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-greenDark leading-relaxed">
                 Residents of King County from low-income backgrounds, first-generation students, and
                 communities of color face systemic challenges that limit opportunities for personal, social, and
                 economic growth. These include lack of access to outdoor activities, mental health struggles,

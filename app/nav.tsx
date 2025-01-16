@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+
 "use client";
 
 import React, { useState } from "react";
@@ -16,15 +16,18 @@ export default function Nav() {
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
         {/* Logo Section */}
         <div className="flex items-center">
-          <a href="#home" className="flex items-center space-x-2">
-            <Image
-              src="/images/Alfidous_Logo.PNG"
-              alt="Alfidous logo"
-              className="w-12 h-12 md:w-16 md:h-16 object-contain"
-            />
-            <span className="text-2xl font-bold text-emerald-500"></span>
-          </a>
-        </div>
+  <a href="#home" className="flex items-center space-x-2">
+    <div className="w-12 h-12 md:w-16 md:h-16 relative">
+      <Image
+        src="/images/Alfidous_Logo.PNG"
+        alt="Alfidous logo"
+        layout="fill" // Ensures the image fills the parent container
+        objectFit="contain" // Prevents distortion of the image
+      />
+    </div>
+    <span className="text-2xl font-bold text-emerald-500"></span>
+  </a>
+</div>
 
         {/* Desktop Navigation Links */}
         <div className="hidden md:flex space-x-6 text-emerald-700">
