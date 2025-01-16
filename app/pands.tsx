@@ -4,8 +4,8 @@ import React, { useState } from "react";
 
 export default function PandS() {
   const [showSolution, setShowSolution] = useState(false);
-  const [activeProblem, setActiveProblem] = useState(null);
-  const [activeSolution, setActiveSolution]= useState(null);
+  const [activeProblem, setActiveProblem] = useState<number | null>(null);
+  const [activeSolution, setActiveSolution]= useState<number | null>(null);
 
   const problems = [
     {
