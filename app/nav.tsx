@@ -1,6 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import React, { useState } from "react";
+import Image from 'next/image';
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,7 +17,7 @@ export default function Nav() {
         {/* Logo Section */}
         <div className="flex items-center">
           <a href="#home" className="flex items-center space-x-2">
-            <img
+            <Image
               src="/images/Alfidous_Logo.PNG"
               alt="Alfidous logo"
               className="w-12 h-12 md:w-16 md:h-16 object-contain"
