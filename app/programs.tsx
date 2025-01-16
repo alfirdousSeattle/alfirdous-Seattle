@@ -76,99 +76,98 @@ const OrgPrograms = () => {
   };
 
   return (
-    <>
+ 
       
-      <section
-        id="programs"
-        className="relative py-40 " 
-      >
+      <section id="programs" className="relative py-0">
+  <h2 className="text-5xl font-bold text-greenDark mb-8 text-center">Our Programs</h2>
+  <p className="text-lg text-greenDark leading-relaxed text-center mb-8">
+    Explore our initiatives designed to foster growth, wellness, and community engagement. Open Calendar to See Upcoming Events
+    <button
+      onClick={() => setShowModal(true)}
+      className="px-6 py-3 ml-4 bg-emerald-700 text-white rounded-full shadow-lg hover:bg-greenDark transition-transform transform hover:scale-105"
+    >
+      🗓
+    </button>
+  </p>
 
-<h2 className="text-5xl font-bold text-greenDark mb-8 text-center">Our Programs</h2>
-      <p className="text-lg text-greenDark leading-relaxed text-center">
-        Explore our initiatives designed to foster growth, wellness, and community engagement. Open Calendar to See Upcoming Events <button
-        onClick={() => setShowModal(true)}
-        className="px-6 py-3 mb-8 bg-emerald-700 text-white rounded-full shadow-lg hover:bg-greenDark transition-transform transform hover:scale-105"
-      >
-        🗓
-      </button>
-      </p>
-      
-
-        <div className="relative max-w-5xl mx-auto px-6 flex flex-col justify-end w-full h-[400] bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/Alfidous_Program_Image.png')" }}>
-          {/* Modal */}
-          {showModal && (
-            <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-              <div className="bg-white rounded-lg shadow-lg w-11/12 md:w-2/3 lg:w-1/2">
-                <div className="flex justify-between items-center px-6 py-4 border-b">
-                  <h3 className="text-xl font-bold text-greenDark">Upcoming Events</h3>
-                  <button
-                    onClick={() => setShowModal(false)}
-                    className="text-gray-500 hover:text-gray-800"
-                  >
-                    &#x2715;
-                  </button>
-                </div>
-                <div className="p-6">
-                  <iframe
-                    src="https://calendar.google.com/calendar/embed?src=abdulahimohamud22%40gmail.com&ctz=America%2FLos_Angeles"
-                    style={{ border: 0 }}
-                    width="100%"
-                    height="400"
-                    frameBorder="0"
-                    scrolling="no"
-                    title="Google Calendar"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-          )}
-
-          
+  {/* Modal */}
+  {showModal && (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+      <div className="bg-white rounded-lg shadow-lg w-11/12 md:w-2/3 lg:w-1/2">
+        <div className="flex justify-between items-center px-6 py-4 border-b">
+          <h3 className="text-xl font-bold text-greenDark">Upcoming Events</h3>
+          <button
+            onClick={() => setShowModal(false)}
+            className="text-gray-500 hover:text-gray-800"
+          >
+            &#x2715;
+          </button>
         </div>
+        <div className="p-6">
+          <iframe
+            src="https://calendar.google.com/calendar/embed?src=abdulahimohamud22%40gmail.com&ctz=America%2FLos_Angeles"
+            style={{ border: 0 }}
+            width="100%"
+            height="400"
+            frameBorder="0"
+            scrolling="no"
+            title="Google Calendar"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  )}
 
-        {/* Carousel */}
-        <div className="relative overflow-hidden">
-            <div
-              className="flex transition-transform duration-700 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 50}%)` }}
-            >
-              {programs.map((program) => (
-                <div
-                  key={program.id}
-                  className="flex-shrink-0 w-1/2 px-4 relative"
-                >
-                  <div className="h-72 bg-greenDark px-5 rounded-lg shadow-lg flex flex-col justify-center items-center">
-                    {/* Title Over Content */}
-                    <h3 className="text-2xl font-bold text-yellowAccent mb-4">
-                      {program.title}
-                    </h3>
-                    <ul className="text-white px-4 list-disc list-inside">
-                      {program.description.map((item, i) => (
-                        <li key={i}>{item}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Navigation Buttons */}
-            <button
-              onClick={handlePrev}
-              className="absolute left-4 bottom-8 transform -translate-y-1/2 bg-white text-emerald-700 px-4 py-2 rounded-full shadow-lg"
-            >
-              &lt;
-            </button>
-            <button
-              onClick={handleNext}
-              className="absolute right-4 bottom-8 transform -translate-y-1/2 bg-white text-emerald-700 px-4 py-2 rounded-full shadow-lg"
-            >
-              &gt;
-            </button>
+  {/* Carousel */}
+  <div className="relative overflow-hidden mt-8">
+    <div
+      className="flex transition-transform duration-700 ease-in-out"
+      style={{ transform: `translateX(-${currentSlide * 50}%)` }}
+    >
+      {programs.map((program) => (
+        <div key={program.id} className="flex-shrink-0 w-1/2 px-4 relative">
+          <div className="h-72 bg-greenDark px-5 rounded-lg shadow-lg flex flex-col justify-start items-center overflow-hidden">
+            {/* Title Over Content */}
+            <h3 className="text-2xl font-bold text-yellowAccent mb-4 text-center">
+              {program.title}
+            </h3>
+            {/* Scrollable Description */}
+            <ul
+  className="text-white px-4 list-disc list-inside overflow-y-auto"
+  style={{ maxHeight: "150px" }}
+  onScroll={(e) => {
+    const target = e.target as HTMLElement; // Cast target to HTMLElement
+    console.log("Scrolled: ", target.scrollTop);
+  }}
+>
+  {program.description.map((item, i) => (
+    <li key={i} className="mb-2">
+      {item}
+    </li>
+  ))}
+</ul>
           </div>
-      </section>
-    </>
+        </div>
+      ))}
+    </div>
+
+    {/* Navigation Buttons */}
+    <button
+      onClick={handlePrev}
+      className="absolute left-4 bottom-8 transform -translate-y-1/2 bg-white text-emerald-700 px-4 py-2 rounded-full shadow-lg"
+    >
+      &lt;
+    </button>
+    <button
+      onClick={handleNext}
+      className="absolute right-4 bottom-8 transform -translate-y-1/2 bg-white text-emerald-700 px-4 py-2 rounded-full shadow-lg"
+    >
+      &gt;
+    </button>
+  </div>
+</section>
+
+
   );
 };
 
