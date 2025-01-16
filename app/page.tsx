@@ -4,7 +4,7 @@
 import Footer from "./footer";
 import AboutUs from "./aboutus";
 import Nav from "./nav";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import PandS from "./pands";
 import OrgPrograms from "./programs";
 
@@ -105,7 +105,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-gradient-to-t from-white to-yellowAccent/100">
+      <section id="contact" className="pt-0 bg-gradient-to-t from-white to-yellowAccent/100">
         
           <Footer />
       </section>

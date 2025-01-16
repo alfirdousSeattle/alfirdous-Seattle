@@ -1,10 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import React from "react";
 import { FaInstagram, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="max-w-5xl mx-auto px-6 py-12 text-center text-white">
+    <footer className="max-w-5xl mx-auto px-6 pt-0 text-center text-white">
       <h2 className="text-5xl font-bold text-greenDark mb-6">Contact Us</h2>
       <p className="text-lg text-greenDark leading-relaxed mb-6">
         Have questions or want to get involved? Reach out to us!
