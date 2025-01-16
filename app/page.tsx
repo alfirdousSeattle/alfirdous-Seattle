@@ -1,12 +1,16 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import Footer from "./footer";
-import Calendar from "./calendar";
-import Aboutus from "./aboutus";
+import AboutUs from "./aboutus";
 import Nav from "./nav";
 import React, { useEffect } from "react";
+import PandS from "./pands";
+import OrgPrograms from "./programs";
 
 export default function Home() {
+
+
   useEffect(() => {
     const handleNavLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
       e.preventDefault();
@@ -35,67 +39,75 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-emerald-700">
+    <div className="min-h-screen bg-white">
       <Nav />
 
       {/* Hero Section */}
       <section
         id="home"
         className="relative w-full h-[600px] md:h-[700px] flex items-center justify-center text-center"
-        style={{
-          backgroundImage:
-            'url("https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1500&auto=format&fit=crop&q=60")',
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
       >
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-transparent to-yellowAccent/100"></div>
 
-        {/* Content */}
-        <div className="relative z-10 px-6">
-          <h1 className="text-4xl md:text-7xl font-extrabold text-white leading-snug drop-shadow-lg">
-            Discover Nature’s Beauty <br /> with Alfirdous Seattle
-          </h1>
-          <p className="mt-6 text-lg md:text-2xl text-gray-200 max-w-3xl mx-auto">
-            Embark on unforgettable adventures and explore the great outdoors.
-          </p>
-          <div className="mt-8">
-            <a
-              href="#about-us"
-              className="px-8 py-4 text-lg font-semibold text-white bg-emerald-600 hover:bg-emerald-500 rounded-full shadow-lg transition-transform transform hover:scale-105"
-            >
-              Learn More
-            </a>
+        <div className="relative z-10 flex items-center justify-center w-full px-6">
+          {/* Left: Logo */}
+          <div className="flex-shrink-0">
+            <img
+              src="/images/Alfidous_Logo.PNG"
+              alt="Alfidous logo"
+              className="max-w-lg max-h-lg md:w-45 md:h-45 mx-0"
+            />
+          </div>
+
+          {/* Right: Text Content */}
+          <div className="ml-8 text-left max-w-lg">
+            <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-snug drop-shadow-lg">
+              Cultivating Connection, Community, and Care
+            </h1>
+            <p className="mt-6 text-lg md:text-2xl text-emerald-700">
+              Join us in fostering growth, resilience, and belonging in the greater Seattle area.
+            </p>
+            <div className="mt-8">
+              <a
+                href="#about-us"
+                className="px-8 py-4 text-lg font-semibold text-white bg-emerald-700 hover:bg-emerald-500 rounded-full shadow-lg transform hover:scale-105 "
+              >
+                Learn More
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* About Us Section */}
-      <section id="about-us" className="py-20 bg-white">
-        <div className="mt-12">
-          <Aboutus />
+      <section id="about-us" className="py-20 bg-gradient-to-t from-yellowAccent/100 to-white">
+      
+          
+          <AboutUs />
+
+      </section>
+
+      {/* Problem and Solution Section */}
+      <section id="pands" className="py-20 bg-gradient-to-t from-white to-yellowAccent/100">
+        <div className="max-w-5xl mx-auto px-6">
+          <PandS />
         </div>
       </section>
 
-      {/* Events Section */}
-      <section id="events" className="py-20 bg-emerald-700">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <h2 className="text-5xl font-bold text-white mb-6">Upcoming Events</h2>
-          <p className="text-lg text-white leading-relaxed">
-            Join us on our upcoming adventures and community events.
-          </p>
-        </div>
-        <div className="mt-12">
-          <Calendar />
+      {/* Programs Section */}
+      <section id="programs" className="py-20 bg-gradient-to-t from-yellowAccent/100 to-white">
+      
+       
+       
+        <div className="max-w-5xl mx-auto px-6">
+          <OrgPrograms />
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-emerald-700">
-        <div className="mt-12">
+      <section id="contact" className="pt-0 bg-gradient-to-t from-white to-yellowAccent/100">
+        
           <Footer />
-        </div>
       </section>
     </div>
   );
