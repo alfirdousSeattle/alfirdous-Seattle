@@ -84,7 +84,7 @@ const OrgPrograms = () => {
       >
 
 <h2 className="text-5xl font-bold text-greenDark mb-8 text-center">Our Programs</h2>
-      <p className="text-xl mb-6 text-greenDark max-w-3xl text-center">
+      <p className="text-lg text-greenDark leading-relaxed text-center">
         Explore our initiatives designed to foster growth, wellness, and community engagement. Open Calendar to See Upcoming Events <button
         onClick={() => setShowModal(true)}
         className="px-6 py-3 mb-8 bg-emerald-700 text-white rounded-full shadow-lg hover:bg-greenDark transition-transform transform hover:scale-105"
@@ -94,7 +94,7 @@ const OrgPrograms = () => {
       </p>
       
 
-        <div className="relative max-w-5xl mx-auto px-6 pt-2 flex flex-col justify-end w-full h-[400] bg-cover bg-center"
+        <div className="relative max-w-5xl mx-auto px-6 flex flex-col justify-end w-full h-[400] bg-cover bg-center"
         style={{ backgroundImage: "url('/images/Alfidous_Program_Image.png')" }}>
           {/* Modal */}
           {showModal && (
