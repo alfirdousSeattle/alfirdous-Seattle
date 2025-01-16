@@ -40,75 +40,74 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Nav />
-
-      {/* Hero Section */}
-      <section
-        id="home"
-        className="relative w-full h-[600px] md:h-[700px] flex items-center justify-center text-center"
-      >
-        <div className="absolute inset-0 bg-gradient-to-t from-transparent to-yellowAccent/100"></div>
-
-        <div className="relative z-10 flex items-center justify-center w-full px-6">
-          {/* Left: Logo */}
-          <div className="flex-shrink-0">
-            <img
-              src="/images/Alfidous_Logo.PNG"
-              alt="Alfidous logo"
-              className="max-w-lg max-h-lg md:w-45 md:h-45 mx-0"
-            />
-          </div>
-
-          {/* Right: Text Content */}
-          <div className="ml-8 text-left max-w-lg">
-            <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-snug drop-shadow-lg">
-              Cultivating Connection, Community, and Care
-            </h1>
-            <p className="mt-6 text-lg md:text-2xl text-emerald-700">
-              Join us in fostering growth, resilience, and belonging in the greater Seattle area.
-            </p>
-            <div className="mt-8">
-              <a
-                href="#about-us"
-                className="px-8 py-4 text-lg font-semibold text-white bg-emerald-700 hover:bg-emerald-500 rounded-full shadow-lg transform hover:scale-105 "
-              >
-                Learn More
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* About Us Section */}
-      <section id="about-us" className="py-20 bg-gradient-to-t from-yellowAccent/100 to-white">
-      
-          
-          <AboutUs />
-
-      </section>
-
-      {/* Problem and Solution Section */}
-      <section id="pands" className="py-20 bg-gradient-to-t from-white to-yellowAccent/100">
-        <div className="max-w-5xl mx-auto px-6">
-          <PandS />
-        </div>
-      </section>
-
-      {/* Programs Section */}
-      <section id="programs" className="py-20 bg-gradient-to-t from-yellowAccent/100 to-white">
-      
-       
-       
-        <div className="max-w-5xl mx-auto px-6">
-          <OrgPrograms />
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="pt-0 bg-gradient-to-t from-white to-yellowAccent/100">
-        
-          <Footer />
-      </section>
-    </div>
+    <Nav />
+  
+    {/* Hero Section */}
+    <section
+      id="home"
+      className="relative w-full h-auto md:h-[700px] flex flex-col md:flex-row items-center justify-center text-center md:text-left px-6"
+    >
+      {/* Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-t from-transparent to-yellowAccent/100"></div>
+  
+      {/* Left: Logo */}
+      <div className="relative z-10 flex-shrink-0 w-full md:w-auto mb-6 md:mb-0 flex justify-center">
+        <img
+          src="/images/Alfidous_Logo.PNG"
+          alt="Alfidous logo"
+          className="w-96 h-96 lg:max-w-lg lg:max-h-lg md:max-h-md md:max-w-md sm:max-h-md sm:max-w-md mx-0"
+        />
+      </div>
+  
+      {/* Right: Text Content */}
+      <div className="relative z-10 md:ml-8 max-w-lg">
+        <h1 className="text-3xl md:text-6xl font-extrabold text-white leading-snug drop-shadow-lg">
+          Cultivating Connection, Community, and Care
+        </h1>
+        <p className="mt-4 text-base md:text-2xl text-emerald-700">
+          Join us in fostering growth, resilience, and belonging in the greater Seattle area.
+        </p>
+      </div>
+    </section>
+  
+    {/* About Us Section */}
+    <section
+      id="about-us"
+      className="py-40 md:py-20 bg-gradient-to-t from-yellowAccent/100 to-white"
+    >
+      <div className="max-w-5xl mx-auto px-6">
+        <AboutUs />
+      </div>
+    </section>
+  
+    {/* Problem and Solution Section */}
+    <section
+      id="pands"
+      className="py-40 md:py-20 bg-gradient-to-t from-white to-yellowAccent/100"
+    >
+      <div className="max-w-5xl mx-auto px-6">
+        <PandS />
+      </div>
+    </section>
+  
+    {/* Programs Section */}
+    <section
+      id="programs"
+      className="py-40 md:py-20 bg-gradient-to-t from-yellowAccent/100 to-white"
+    >
+      <div className="max-w-5xl mx-auto px-6">
+        <OrgPrograms />
+      </div>
+    </section>
+  
+    {/* Contact Section */}
+    <section
+      id="contact"
+      className="pt-0 bg-gradient-to-t from-white to-yellowAccent/100"
+    >
+      <Footer />
+    </section>
+  </div>
+  
   );
 }
