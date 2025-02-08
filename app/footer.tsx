@@ -1,7 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 import React from "react";
-import { FaInstagram, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import Image from "next/image";
+import { FaInstagram, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -15,10 +15,12 @@ export default function Footer() {
       <div className="flex flex-col md:flex-row items-center justify-between text-gray-400 space-y-6 md:space-y-0 md:space-x-8">
         {/* Left: Logo */}
         <div className="flex-shrink-0 flex justify-center">
-          <img
+          <Image
             src="/images/Alfidous_Logo.PNG"
             alt="Alfidous logo"
-            className="w-24 h-24 md:w-52 md:h-52 "
+            width={96} // Fixed width in pixels
+            height={96} // Fixed height in pixels
+            className="w-24 h-24 md:w-52 md:h-52 object-contain"
           />
         </div>
 
@@ -33,14 +35,16 @@ export default function Footer() {
             aria-label="Visit our Instagram page"
           >
             <FaInstagram className="text-3xl" />
-            <span className="text-lg">Instagram</span>
+            <span className="text-lg">AlFirdous Seattle</span>
           </a>
 
           {/* Phone and Email */}
-          <p className="flex items-center space-x-2">
-            <FaPhoneAlt className="text-lg" />
-            <span className="text-lg">Phone: (206) 454 - 0026</span>
-          </p>
+          <a href="https://chat.whatsapp.com/FBazUU56JRDAwmUbGl0dZn">
+            <p className="flex items-center space-x-2">
+              <FaWhatsapp className="text-lg" />
+              <span className="text-lg">WhatsApp Group </span>
+            </p>
+          </a>
           <p className="flex items-center space-x-2">
             <FaEnvelope className="text-lg" />
             <span className="text-lg">Email: admin@alfirdousseattle.org</span>
