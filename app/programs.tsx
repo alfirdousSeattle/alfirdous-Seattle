@@ -49,7 +49,7 @@ const OrgPrograms: React.FC = () => {
     {
       id: 4,
       title: "Youth Engagement",
-      image: "/images/Carrer.jpg", // Image for youth-related events
+      image: "/images/Carrer.JPG", // Image for youth-related events
       description: [
         "Special events and tours for boys and girls.",
         "Microsoft Campus Tour to encourage learning and social interaction."
