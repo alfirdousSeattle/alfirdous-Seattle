@@ -53,7 +53,7 @@ export default function Nav() {
           <div className="hidden md:flex space-x-6 font-semibold bg-white text-emerald-700 text-sm md:text-base px-5">
             <a href="#about-us" className="hover:text-emerald-500 transition">About Us</a>
             <a href="#programs" className="hover:text-emerald-500 transition">Programs</a>
-            <a href="#calendar" className="hover:text-emerald-500 transition">Events</a>
+            <a href="#calander" className="hover:text-emerald-500 transition">Events</a>
             <a href="#contact" className="hover:text-emerald-500 transition">Contact</a>
             <button onClick={() => setModalOpen(true)} className="hover:text-emerald-500 transition">Donate</button>
           </div>
@@ -82,7 +82,7 @@ export default function Nav() {
             <div className="flex flex-col space-y-3 py-3 px-4 text-sm">
               <a href="#about-us" className="hover:text-emerald-500 transition" onClick={() => setMenuOpen(false)}>About Us</a>
               <a href="#programs" className="hover:text-emerald-500 transition" onClick={() => setMenuOpen(false)}>Programs</a>
-              <a href="#calendar" className="hover:text-emerald-500 transition" onClick={() => setMenuOpen(false)}>Events</a>
+              <a href="#calander" className="hover:text-emerald-500 transition" onClick={() => setMenuOpen(false)}>Events</a>
               <a href="#contact" className="hover:text-emerald-500 transition" onClick={() => setMenuOpen(false)}>Contact</a>
               <button onClick={() => { setMenuOpen(false); setModalOpen(true); }} className="hover:text-emerald-500 transition">Donate</button>
             </div>
