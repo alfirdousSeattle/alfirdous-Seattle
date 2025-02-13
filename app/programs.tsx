@@ -17,62 +17,44 @@ const OrgPrograms: React.FC = () => {
   const programs: ProgramType[] = [
     {
       id: 1,
-      title: "Professional development",
-      image: "/images/Carrer.JPG",
+      title: "Women-Only Activities",
+      image: "/images/hiking.jpg", // Using the hiking image for outdoor activities
       description: [
-        "Creating safe spaces for meaningful dialogue and social connections.",
-        "Community meals with conversations about life and mental health.",
-        "Inclusive gatherings to foster social bonds.",
+        "Biweekly hiking.",
+        "Monthly brunch/dinner potlucks.",
+        "Annual retreats.",
+        "Snow tubing and more to come, Insha’Allah."
       ],
     },
     {
       id: 2,
-      title: "Potlucks",
-      image: "/images/potlock.JPG",
+      title: "Family-Oriented Events",
+      image: "/images/family.JPG", // Keeping the family image for family gatherings
       description: [
-        "Wellness retreats and guided discussions.",
-        "Creative activities to promote emotional wellness.",
-        "Kids Fun Night to promote joy for young ones.",
+        "Arts & Crafts Night.",
+        "Family Game Night.",
+        "Family Camping (in progress)."
       ],
     },
     {
       id: 3,
-      title: "Wellness activities",
-      image: "/images/hiking.jpg",
+      title: "Workshops & Educational Sessions",
+      image: "/images/Arts.JPG", // Image for workshops and educational sessions
       description: [
-        "College application workshops.",
-        "Resume-building sessions.",
-        "Networking opportunities with professionals.",
+        "Resume Workshop.",
+        "MS employee panel.",
+        "Other topics relevant to the community’s needs."
       ],
     },
     {
       id: 4,
-      title: "Giving back",
-      image: "/images/Charity.jpg",
+      title: "Youth Engagement",
+      image: "/images/Carrer.jpg", // Image for youth-related events
       description: [
-        "Family camping trips to foster bonding.",
-        "Multi-Cultural Nights to celebrate traditions and diversity.",
+        "Special events and tours for boys and girls.",
+        "Microsoft Campus Tour to encourage learning and social interaction."
       ],
     },
-    // {
-    //   id: 5,
-    //   title: "Outdoor Adventures Program",
-    //   image: "/images/outdoor_adventures.jpg",
-    //   description: [
-    //     "Hiking trips and nature retreats.",
-    //     "Snow tubing adventures and carpooling services.",
-    //   ],
-    // },
-    // {
-    //   id: 6,
-    //   title: "Community Engagement Program",
-    //   image: "/images/community_engagement.jpg",
-    //   description: [
-    //     "Food distribution drives.",
-    //     "Community service projects.",
-    //     "Small vendor bazaars to support local entrepreneurs.",
-    //   ],
-    // },
   ];
 
   return (
@@ -85,13 +67,13 @@ const OrgPrograms: React.FC = () => {
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
         {programs.map((program) => (
           <div key={program.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
-            {/* Image (Fixed width & height) */}
+            {/* Image (Increased height to h-72 for a larger display) */}
             <Image
               src={program.image}
               alt={program.title}
-              width={400} // Set appropriate width
-              height={300} // Set appropriate height
-              className="w-full h-48 object-cover"
+              width={800}
+              height={600}
+              className="w-full h-72 object-cover"
             />
 
             {/* Content */}
