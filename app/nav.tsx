@@ -1,25 +1,17 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function Nav() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
-  const [modalOpen, setModalOpen] = useState(false);
-  let lastScrollY = 0;
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); // Track menu visibility
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setIsVisible(false);
-      } else {
-        setIsVisible(true);
-      }
-      lastScrollY = currentScrollY;
+      setShowNavbar(window.scrollY < 100); // Hide navbar after scrolling down
+      setShowScrollTop(window.scrollY > 300); // Show "⬆" arrow after scrolling down
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -28,87 +20,84 @@ export default function Nav() {
     };
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <>
-      <nav
-        className={`fixed w-full z-50 bg-transparent transition-transform duration-300 ${
-          isVisible ? "translate-y-0" : "-translate-y-full"
-        }`}
-      >
-        <div className="container mx-auto flex justify-between items-center py-2 px-4 md:px-6">
-          <div className="flex items-center">
-            <a href="#home" className="flex items-center space-x-2">
-              <div className="text-xl relative w-16 h-16 md:w-32 md:h-32">
-                
-                <Image
-                  src="/images/Alfidous_Logo.PNG"
-                  alt="Alfidous logo"
-                  fill
-                  className="object-fill"
-                />
-              </div>
-            </a>
-          </div>
+      {/* Navbar - Only visible at the top of the page */}
+      {showNavbar && (
+        <nav className="fixed top-0 w-full z-50 bg-white shadow-md transition-all duration-300">
+          <div className="container mx-auto flex justify-between items-center py-1 px-4 md:px-6">
+            
+            {/* Logo - Increased size but navbar stays compact */}
+            <div className="flex items-center">
+              <a href="#home" className="flex items-center space-x-2">
+                <div className="relative w-14 h-14 md:w-20 md:h-20">
+                  <Image
+                    src="/images/Alfidous_Logo.PNG"
+                    alt="Alfidous logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </a>
+            </div>
 
-          <div className="hidden md:flex space-x-6 font-semibold bg-white text-emerald-700 text-sm md:text-base px-5">
-            <a href="#about-us" className="hover:text-emerald-500 transition">About Us</a>
-            <a href="#programs" className="hover:text-emerald-500 transition">Programs</a>
-            <a href="#calander" className="hover:text-emerald-500 transition">Events</a>
-            <a href="#contact" className="hover:text-emerald-500 transition">Contact</a>
-            <button onClick={() => setModalOpen(true)} className="hover:text-emerald-500 transition">Donate</button>
-          </div>
+            {/* Desktop Navigation (Centered & Better Spacing) */}
+            <div className="hidden md:flex flex-1 justify-center items-center space-x-8 font-semibold text-emerald-700 text-xl md:text-xl">
+              <a href="#about-us" className="hover:text-emerald-500 transition">About Us</a>
+              <a href="#programs" className="hover:text-emerald-500 transition">Programs</a>
+              <a href="#calander" className="hover:text-emerald-500 transition">Event Calendar</a>
+              <a href="#contact" className="hover:text-emerald-500 transition">Contact us</a>
+            </div>
 
-          <div className="md:hidden">
-            <button
-              className="text-emerald-500 focus:outline-none"
-              aria-label="Toggle Menu"
-              onClick={() => setMenuOpen(!menuOpen)}
-            >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+            {/* Mobile Menu Toggle */}
+            <div className="md:hidden">
+              <button
+                className="text-emerald-500 focus:outline-none"
+                aria-label="Toggle Menu"
+                onClick={() => setMenuOpen(!menuOpen)} // Toggle menu state
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        {menuOpen && (
-          <div className="md:hidden bg-white text-emerald-700 w-full absolute top-full left-0 shadow-lg z-40">
-            <div className="flex flex-col space-y-3 py-3 px-4 text-sm">
-              <a href="#about-us" className="hover:text-emerald-500 transition" onClick={() => setMenuOpen(false)}>About Us</a>
-              <a href="#programs" className="hover:text-emerald-500 transition" onClick={() => setMenuOpen(false)}>Programs</a>
-              <a href="#calander" className="hover:text-emerald-500 transition" onClick={() => setMenuOpen(false)}>Events</a>
-              <a href="#contact" className="hover:text-emerald-500 transition" onClick={() => setMenuOpen(false)}>Contact</a>
-              <button onClick={() => { setMenuOpen(false); setModalOpen(true); }} className="hover:text-emerald-500 transition">Donate</button>
+                <svg
+                  className="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+              </button>
             </div>
           </div>
-        )}
-      </nav>
 
-      {modalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="bg-white p-6 rounded-lg shadow-lg text-center relative">
-            <button
-              className="absolute top-2 right-2 text-gray-700 hover:text-red-500"
-              onClick={() => setModalOpen(false)}
-            >
-              &times;
-            </button>
-            <h2 className="text-xl font-bold text-greenDark mb-4">Donate to help fund more activities and reach more people!</h2>
-            <Image
-              src="/images/Zelle_QR_Code.JPG"
-              alt="Donation QR Code"
-              width={200}
-              height={200}
-              className="mx-auto"
-            />
-          </div>
-        </div>
+          {/* Mobile Menu - Display when `menuOpen` is true */}
+          {menuOpen && (
+            <div className="md:hidden bg-white text-emerald-700 w-full absolute top-full left-0 shadow-lg z-40">
+              <div className="flex flex-col space-y-3 py-3 px-4 text-lg">
+                <a href="#about-us" className="hover:text-emerald-500 transition" onClick={() => setMenuOpen(false)}>About Us</a>
+                <a href="#programs" className="hover:text-emerald-500 transition" onClick={() => setMenuOpen(false)}>Programs</a>
+                <a href="#calander" className="hover:text-emerald-500 transition" onClick={() => setMenuOpen(false)}>Event Calendar</a>
+                <a href="#contact" className="hover:text-emerald-500 transition" onClick={() => setMenuOpen(false)}>Contact us</a>
+              </div>
+            </div>
+          )}
+        </nav>
+      )}
+
+      {/* Scroll-to-Top Button (Arrow) */}
+      {showScrollTop && (
+         <button
+         onClick={scrollToTop}
+         className="fixed bottom-4 right-4 md:bottom-6 md:right-6 bg-emerald-700 text-white 
+         p-2 md:p-3 rounded-full shadow-lg hover:bg-greenDark 
+         transition-transform transform hover:scale-110 text-sm md:text-base"
+         aria-label="Scroll to top"
+       >
+          ⬆
+        </button>
       )}
     </>
   );
