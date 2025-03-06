@@ -18,41 +18,41 @@ const OrgPrograms: React.FC = () => {
     {
       id: 1,
       title: "Women-Only Activities",
-      image: "/images/hiking.jpg", // Using the hiking image for outdoor activities
+      image: "/images/hiking.jpg",
       description: [
         "Biweekly hiking.",
         "Monthly brunch/dinner potlucks.",
         "Annual retreats.",
-        "Snow tubing and more to come, Insha’Allah."
+        "Snow tubing and more."
       ],
     },
     {
       id: 2,
       title: "Family-Oriented Events",
-      image: "/images/family.JPG", // Keeping the family image for family gatherings
+      image: "/images/Arts.JPG",
       description: [
         "Arts & Crafts Night.",
         "Family Game Night.",
-        "Family Camping (in progress)."
+        "Family Camping."
       ],
     },
     {
       id: 3,
-      title: "Workshops & Educational Sessions",
-      image: "/images/Arts.JPG", // Image for workshops and educational sessions
+      title: "Youth Engagement & Workshops",
+      image: "/images/Carrer.JPG",
       description: [
         "Resume Workshop.",
-        "MS employee panel.",
-        "Other topics relevant to the community’s needs."
+        "Special events and tours for boys and girls.",
+        "Microsoft Campus Tour to encourage learning and social interaction."
       ],
     },
     {
       id: 4,
-      title: "Youth Engagement",
-      image: "/images/Carrer.JPG", // Image for youth-related events
+      title: "Supporting the Community",
+      image: "/images/Charity.JPG",
       description: [
-        "Special events and tours for boys and girls.",
-        "Microsoft Campus Tour to encourage learning and social interaction."
+        "Afgan Refugee food drive.",
+        "Ramadan food drive."
       ],
     },
   ];
@@ -63,11 +63,11 @@ const OrgPrograms: React.FC = () => {
         Our Programs
       </h2>
 
-      {/* Cards Grid */}
-      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
+      {/* Cards Grid (4 columns on large screens) */}
+      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-6">
         {programs.map((program) => (
           <div key={program.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
-            {/* Image (Increased height to h-72 for a larger display) */}
+            {/* Image (Increased height for better display) */}
             <Image
               src={program.image}
               alt={program.title}
