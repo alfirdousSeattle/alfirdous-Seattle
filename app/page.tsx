@@ -29,9 +29,7 @@ export default function Home() {
           Welcome to Al-Firdous Seattle
           </h1>
           <h2 className="mt-4 text-2xl sm:text-xl md:text-3xl text-white">A Place of Support, Growth, and Community Empowerment</h2>
-          <p className="mt-4 text-base sm:text-md md:text-xl text-white">
-          At Al-Firdous Seattle, we are dedicated to uplifting individuals and strengthening communities through meaningful connections and essential services. Whether you’re seeking support, looking for ways to give back, or hoping to engage with a welcoming community, you belong here.
-          </p>
+          
         </div>
       </section>
 
