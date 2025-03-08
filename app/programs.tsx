@@ -23,17 +23,18 @@ const OrgPrograms: React.FC = () => {
         "Biweekly hiking.",
         "Monthly brunch/dinner potlucks.",
         "Annual retreats.",
-        "Snow tubing and more."
+        "Snow tubing."
       ],
     },
     {
       id: 2,
-      title: "Family-Oriented Events",
+      title: "Community Events",
       image: "/images/Arts.JPG",
       description: [
         "Arts & Crafts Night.",
         "Family Game Night.",
-        "Family Camping."
+        "Camping.",
+        "Community Bazaar"
       ],
     },
     {
@@ -42,17 +43,18 @@ const OrgPrograms: React.FC = () => {
       image: "/images/Carrer.JPG",
       description: [
         "Resume Workshop.",
-        "Special events and tours for boys and girls.",
-        "Microsoft Campus Tour to encourage learning and social interaction."
+        "Educational Workshops and tours.",
+        "College Workshops"
       ],
     },
     {
       id: 4,
       title: "Supporting the Community",
-      image: "/images/Charity.JPG",
+      image: "/images/Charity.jpg",
       description: [
-        "Afgan Refugee food drive.",
-        "Ramadan food drive."
+        "Afghan Refugee food drive.",
+        "Ramadan food drive.",
+        "Donations Drives for those in need"
       ],
     },
   ];
@@ -66,8 +68,11 @@ const OrgPrograms: React.FC = () => {
       {/* Cards Grid (4 columns on large screens) */}
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-6">
         {programs.map((program) => (
-          <div key={program.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
-            {/* Image (Increased height for better display) */}
+          <div 
+            key={program.id} 
+            className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col h-full"
+          >
+            {/* Image */}
             <Image
               src={program.image}
               alt={program.title}
@@ -77,11 +82,15 @@ const OrgPrograms: React.FC = () => {
             />
 
             {/* Content */}
-            <div className="p-6 text-center">
+            <div className="p-6 flex flex-col flex-grow">
               <h3 className="text-xl font-bold text-greenDark mb-4">{program.title}</h3>
+              
+              {/* Pushes button to the bottom */}
+              <div className="flex-grow"></div> 
+
               <button
                 onClick={() => setSelectedProgram(program)}
-                className="px-5 py-2 bg-emerald-700 text-white rounded-full shadow-lg hover:bg-greenDark transition-transform transform hover:scale-105"
+                className="mt-4 px-5 py-2 bg-emerald-700 text-white rounded-full shadow-lg hover:bg-greenDark transition-transform transform hover:scale-105"
               >
                 Learn More
               </button>
