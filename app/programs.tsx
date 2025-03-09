@@ -49,7 +49,7 @@ const OrgPrograms: React.FC = () => {
     },
     {
       id: 4,
-      title: "Supporting the Community",
+      title: "Charity Work",
       image: "/images/Charity.jpg",
       description: [
         "Afghan Refugee food drive.",
