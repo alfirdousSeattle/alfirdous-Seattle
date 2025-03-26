@@ -10,7 +10,7 @@ export default function AboutUs() {
             <div className="w-full flex flex-col justify-center items-center px-8">
                 {/* Main Content */}
                 <h2 className="text-5xl font-bold text-greenDark mb-8 text-center">
-                    About Al-Fidous Seattle
+                    About Al-Firdous Seattle
                 </h2>
                 <div className="text-xl mb-6 text-greenDark max-w-3xl">
                     <p>
