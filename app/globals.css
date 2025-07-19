@@ -5,6 +5,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --green-dark: #355638;
+  --green-muted: #768376;
+  --gray-soft: #cacdca;
+  --yellow-accent: #ecc590;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,4 +22,37 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom utility classes for better color support */
+.text-greenDark {
+  color: var(--green-dark);
+}
+
+.bg-greenDark {
+  background-color: var(--green-dark);
+}
+
+.text-greenMuted {
+  color: var(--green-muted);
+}
+
+.bg-greenMuted {
+  background-color: var(--green-muted);
+}
+
+.text-graySoft {
+  color: var(--gray-soft);
+}
+
+.bg-graySoft {
+  background-color: var(--gray-soft);
+}
+
+.text-yellowAccent {
+  color: var(--yellow-accent);
+}
+
+.bg-yellowAccent {
+  background-color: var(--yellow-accent);
 }
