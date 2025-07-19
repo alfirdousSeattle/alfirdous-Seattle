@@ -25,7 +25,7 @@ export default function AboutUs() {
               dedicated volunteers has grown into a vibrant organization that serves hundreds of individuals 
               and families through comprehensive programs including outdoor activities, educational workshops, 
               and charitable initiatives. Through collaboration with local organizations and the dedication 
-              of our volunteer network, we've created lasting positive impact throughout the region.
+              of our volunteer network, we&apos;ve created lasting positive impact throughout the region.
             </p>
           </div>
 
@@ -39,7 +39,7 @@ export default function AboutUs() {
               <p className="text-base text-gray-700 leading-relaxed">
                 At Al-Firdous Seattle, we foster connection, well-being, and empowerment through inclusive programs, 
                 community engagement, and essential services. As a volunteer-driven organization, we believe in the 
-                power of collective action and mutual support. Whether you're seeking support, opportunities to give 
+                power of collective action and mutual support. Whether you&apos;re seeking support, opportunities to give 
                 back, or a welcoming space to grow, you belong here.
               </p>
             </div>

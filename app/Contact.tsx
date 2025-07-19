@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaUsers, FaPhone, FaEnvelope, FaInstagram } from "react-icons/fa";
 
 export default function Contact() {

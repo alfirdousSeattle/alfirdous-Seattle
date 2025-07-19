@@ -22,7 +22,6 @@ interface ProgramType {
 
 const OrgPrograms: React.FC = () => {
   const [selectedProgram, setSelectedProgram] = useState<ProgramType | null>(null);
-  const [videoLoading, setVideoLoading] = useState<{[key: string]: boolean}>({});
 
   const programs: ProgramType[] = [
     {
