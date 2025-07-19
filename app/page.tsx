@@ -6,6 +6,8 @@ import Nav from "./nav";
 import React from "react";
 import PandS from "./pands";
 import OrgPrograms from "./programs";
+import Contact from "./Contact";
+
 
 
 
@@ -33,28 +35,23 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about-us" className="py-20  mt-8">
-        <div className="max-w-5xl mx-auto px-6">
-          <AboutUs />
-        </div>
+      <section id="about-us">
+        <AboutUs />
       </section>
 
-      <section id="programs" className="py-20 ">
-        <div className="max-w-5xl mx-auto px-6">
-          <OrgPrograms />
-        </div>
+      <section id="programs">
+        <OrgPrograms />
       </section>
 
-      <section id="calander" className="py-20  mt-8">
-        <div className="max-w-5xl mx-auto px-6">
-          <PandS />
-        </div>
+      <section id="calander">
+        <PandS />
       </section>
 
-
-      <section id="contact" className="pt-0 ">
-        <Footer />
+      <section id="contact">
+        <Contact />
       </section>
+
+      <Footer />
     </div>
   );
 }
