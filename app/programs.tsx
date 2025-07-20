@@ -76,7 +76,7 @@ const OrgPrograms: React.FC = () => {
       activities: [
         { name: "Resume Workshop", image: "/images/Career.JPG" },
         { name: "Educational Workshops", image: "/images/Carrer.JPG" },
-        { name: "College Workshops", image: "/images/Resume.jpeg" }
+        { name: "College Workshops", image: "/images/resume.jpg" }
       ]
     },
     {
@@ -92,7 +92,7 @@ const OrgPrograms: React.FC = () => {
       ],
       activities: [
         { name: "Afghan Refugee Food Drive", image: "/images/Afghan.png" },
-        { name: "Ramadan Food Drive", image: "/images/Food.jpg" },
+        { name: "Ramadan Food Drive", image: "/images/Food.JPG" },
         { name: "Donations Drives", image: "/images/Charity.jpg" }
       ]
     },
