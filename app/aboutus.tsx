@@ -9,7 +9,7 @@ export default function AboutUs() {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-black">
               About Al-Firdous Seattle
             </h2>
           </div>
@@ -17,9 +17,9 @@ export default function AboutUs() {
           {/* History Section - Centered */}
           <div className="bg-white rounded-2xl shadow-lg p-6 mb-6 max-w-4xl mx-auto">
             <div className="text-center mb-4">
-              <h3 className="text-xl font-bold text-gray-900"> History</h3>
+              <h3 className="text-2xl font-bold text-gray-900"> History</h3>
             </div>
-            <p className="text-base text-gray-700 text-center">
+            <p className="text-lg text-gray-700 text-center">
             Founded in 2024, Al-Firdous Seattle is dedicated to building a supportive and inclusive community 
             where individuals feel valued, connected, and empowered. We create meaningful opportunities for 
             engagement through outdoor experiences, workshops, mentorship, community service, and wellness retreats. 
@@ -34,9 +34,9 @@ export default function AboutUs() {
             {/* Mission */}
             <div className="bg-white rounded-2xl shadow-lg p-6">
               <div className="text-center mb-4">
-                <h3 className="text-xl font-bold text-gray-900"> Mission</h3>
+                <h3 className="text-2xl font-bold text-gray-900"> Mission</h3>
               </div>
-              <p className="text-base text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed">
               At Al-Firdous Seattle, we foster connection, well-being, and
               empowerment through inclusive programs, community engagement, and
               essential services. Whether you’re seeking support, opportunities to
@@ -47,9 +47,9 @@ export default function AboutUs() {
             {/* Vision */}
             <div className="bg-white rounded-2xl shadow-lg p-6">
               <div className="text-center mb-4">
-                <h3 className="text-xl font-bold text-gray-900">Vision</h3>
+                <h3 className="text-2xl font-bold text-gray-900">Vision</h3>
               </div>
-              <p className="text-base text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed">
               We envision a thriving, connected community where every
               individual feels valued, supported, and empowered. Through meaningful
               connections, accessible resources, and inclusive programs, we strive
