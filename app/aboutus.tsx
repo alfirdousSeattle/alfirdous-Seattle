@@ -20,12 +20,12 @@ export default function AboutUs() {
               <h3 className="text-xl font-bold text-gray-900"> History</h3>
             </div>
             <p className="text-base text-gray-700 text-center">
-              Founded in 2024, Al-Firdous Seattle emerged from a vision to create meaningful connections 
-              and support systems within the Greater Seattle community. What began as a small group of 
-              dedicated volunteers has grown into a vibrant organization that serves hundreds of individuals 
-              and families through comprehensive programs including outdoor activities, educational workshops, 
-              and charitable initiatives. Through collaboration with local organizations and the dedication 
-              of our volunteer network, we&apos;ve created lasting positive impact throughout the region.
+            Founded in 2024, Al-Firdous Seattle is dedicated to building a supportive and inclusive community 
+            where individuals feel valued, connected, and empowered. We create meaningful opportunities for 
+            engagement through outdoor experiences, workshops, mentorship, community service, and wellness retreats. 
+            Our initiatives foster personal growth, mental well-being, and strong social connections while addressing 
+            barriers like isolation and limited access to resources. By collaborating with local organizations, we 
+            expand our impact and continue to strengthen community ties.
             </p>
           </div>
 
@@ -37,10 +37,10 @@ export default function AboutUs() {
                 <h3 className="text-xl font-bold text-gray-900"> Mission</h3>
               </div>
               <p className="text-base text-gray-700 leading-relaxed">
-                At Al-Firdous Seattle, we foster connection, well-being, and empowerment through inclusive programs, 
-                community engagement, and essential services. As a volunteer-driven organization, we believe in the 
-                power of collective action and mutual support. Whether you&apos;re seeking support, opportunities to give 
-                back, or a welcoming space to grow, you belong here.
+              At Al-Firdous Seattle, we foster connection, well-being, and
+              empowerment through inclusive programs, community engagement, and
+              essential services. Whether you’re seeking support, opportunities to
+              give back, or a welcoming space to grow, you belong here
               </p>
             </div>
 
@@ -50,10 +50,11 @@ export default function AboutUs() {
                 <h3 className="text-xl font-bold text-gray-900">Vision</h3>
               </div>
               <p className="text-base text-gray-700 leading-relaxed">
-                We envision a thriving, connected community where every individual feels valued, supported, and 
-                empowered. Through meaningful connections, accessible resources, and inclusive programs, we strive to 
-                create a future where everyone has a sense of belonging and the opportunity to grow and succeed. 
-                Our volunteer-driven approach ensures sustainable impact and genuine community ownership.
+              We envision a thriving, connected community where every
+              individual feels valued, supported, and empowered. Through meaningful
+              connections, accessible resources, and inclusive programs, we strive
+              to create a future where everyone has a sense of belonging and the
+              opportunity to grow and succeed.
               </p>
             </div>
           </div>
